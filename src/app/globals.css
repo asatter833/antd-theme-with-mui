@@ -1,6 +1,49 @@
 @import "tailwindcss";
 @import "antd/dist/reset.css";
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@theme {
+  --color-primary-50: #f5f4f5;
+  --color-primary-100: #c2bcc2;
+  --color-primary-200: #8e848e;
+  --color-primary-300: #5b4c5b;
+  --color-primary-400: #301d30;
+  --color-primary-500: #2a1a2a;
+  --color-primary-600: #241624;
+  --color-primary-700: #1e121e;
+  --color-primary-800: #180f18;
+  --color-primary-900: #120b12;
+}
+
+/* Dark mode colors - use @media query */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary-50: #e0fdfa;
+    --color-primary-100: #b3f5e9;
+    --color-primary-200: #80eed9;
+    --color-primary-300: #4ce7c9;
+    --color-primary-400: #26d6b4;
+    --color-primary-500: #20b99b;
+    --color-primary-600: #1a9d82;
+    --color-primary-700: #148069;
+    --color-primary-800: #0e6450;
+    --color-primary-900: #084737;
+  }
+  .dark,
+  .dark * {
+    --color-primary-50: #f5f4f5;
+    --color-primary-100: #c2bcc2;
+    --color-primary-200: #8e848e;
+    --color-primary-300: #5b4c5b;
+    --color-primary-400: #301d30;
+    --color-primary-500: #2a1a2a;
+    --color-primary-600: #241624;
+    --color-primary-700: #1e121e;
+    --color-primary-800: #180f18;
+    --color-primary-900: #120b12;
+  }
+}
+
 .ant-input,
 .ant-picker,
 .ant-select {
